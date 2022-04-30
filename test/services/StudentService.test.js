@@ -11,4 +11,9 @@ describe("Tests para Student Services.", ()=>{
         const lista=studentservice.getalumnosconcertificado(alumnos)
         expect(lista.length).toBe(1)
     })
+    test("Requerimiento 3: Obtener lista de estudiantes con más de 500 créditos", ()=>{
+        const alumnos= [{name: "Ajelandro", credits: 508, haveCertification: true },{name: "Alex", haveCertification: false, credits: 400 },{name: "Ariel", haveCertification: false, credits: 700 }]
+        const lista=studentservice.getalumnosprodigio(alumnos)
+        expect(lista.length).toBe(2)
+    })
 })
