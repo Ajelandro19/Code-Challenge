@@ -1,10 +1,9 @@
 const studentservice = require("./../../lib/services/StudentService")
 
 describe("Tests para Student Services.", ()=>{
-    test("Requerimiento 1: Obtener lista de estudiantes con sus campos", ()=>{
-        const alumnos= {name: "Ajelandro", id:"12121asd123" }
+    test("Requerimiento 1: Obtener numero de estudiantes de una lista", ()=>{
+        const alumnos= [{name: "Ajelandro", id:"12121asd123" },{name: "Alex", id:"121dsad32132" }]
         const lista=studentservice.getlistadealumnos(alumnos)
-        console.log(lista)
-        expect(lista.length).toBe(1)
+        expect(lista.length).toBe(2)
     })
 })
