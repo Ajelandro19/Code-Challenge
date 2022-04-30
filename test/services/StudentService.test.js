@@ -19,6 +19,6 @@ describe("Tests para Student Services.", ()=>{
     test("Requerimiento 4: Obtener email de estudiantes con certificado", ()=>{
         const alumnos= [{name: "Ajelandro", id:"12121asd123", haveCertification: true, email: "alex@alumno.mx" },{name: "Alex", id:"121dsad32132", haveCertification: false, email: "lala@alumno.mx" }]
         const lista=studentservice.getemailconcertificado(alumnos)
-        expect(lista).toBe("alex@alumno.mx")
+        expect(lista[0]).toBe("alex@alumno.mx")
     })
 })
